@@ -1,5 +1,5 @@
 DemoWeb::Application.routes.draw do
-  root to 'root#home'
+  root to:'root#home'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
