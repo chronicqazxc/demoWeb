@@ -9,10 +9,8 @@
 	<%= f.label :email %></br>
 	<%= f.text_field :email%></br>
 	
-  <div class="field">
     <%= f.label :birthday %><br>
-    <%= f.date_select(:birthday,{:use_two_digit_numbers => true, :start_year => 1970, :end_year => Time.now.year})%>
-  </div>
+    <%= f.date_select(:birthday,{:use_two_digit_numbers => true, :start_year => 1970, :end_year => Time.now.year})%></br>
 	
 	<%= f.label :password %></br>
 	<%= f.password_field :password %></br>
