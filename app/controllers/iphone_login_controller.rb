@@ -6,8 +6,6 @@ class IphoneLoginController < ApplicationController
   def create
     @user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
-    # if @user
-      # Sign in
       sign_in(@user) #helper
       render :json => @user.to_json
     else
