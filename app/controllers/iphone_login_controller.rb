@@ -1,10 +1,12 @@
 class IphoneLoginController < ApplicationController
+  protect_from_forgery with: :null_session
   def new
   end
 
   def create
     @user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
+    # if @user
       # Sign in
       sign_in(@user) #helper
       render :json => @user.to_json
