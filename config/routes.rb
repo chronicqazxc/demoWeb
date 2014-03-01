@@ -1,11 +1,11 @@
 DemoWeb::Application.routes.draw do
-  resources :users
+  resources :crappers
   # resource :iphone_login, only: [:new, :create, :destroy]
   post "iphone_login/create"
   resource :session, only: [:new, :create, :destroy]
   get '/sandbox', to: 'root#sandbox' if Rails.env.development?
   root to:'root#home'
-
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

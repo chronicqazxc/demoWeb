@@ -27,8 +27,6 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(create_params)
-    puts "1234123412342134123431243124321432143214"
-    puts create_params
     if @user.save
       sign_in @user # Sign in when created (session helper)
       flash[:success] = "Welcome, #{@user.name}"

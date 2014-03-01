@@ -1,0 +1,37 @@
+<h1>Add Crapper</h1>
+
+<!-- <%= render 'form' %> -->
+<div class="row">
+	<%= form_for @crapper do |f| %>
+	<%= f.label :city%></br>
+	<%= f.text_field :city%></br>
+	
+	<%= f.label :division %></br>
+	<%= f.text_field :division%></br>
+	
+	<%= f.label :address %></br>
+	<%= f.text_field :address%></br>
+	
+	<%= f.label :name %></br>
+	<%= f.text_field :name%></br>
+	<div>
+		</br><%= f.submit "Register", class: "btn btn-primary" %>
+	</div>
+	
+	<% if @crapper.errors.any? %>
+	<div id="error_explanation">
+		<div class="alert alert-error">
+			There are <%= pluralize @crapper.errors.count, "error" %>.
+		</div>
+		<ul>
+			<% @crapper.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<%end%>
+		</ul>
+	</div>
+	<%end%>
+	
+	<%end%>
+</div>
+
+<%= link_to 'Back', crappers_path %>
