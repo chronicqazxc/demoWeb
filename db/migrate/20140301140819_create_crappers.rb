@@ -1,8 +1,0 @@
-class CreateCrappers < ActiveRecord::Migration
-  def change
-    create_table :crappers do |t|
-
-      t.timestamps
-    end
-  end
-end
