@@ -6,6 +6,7 @@ DemoWeb::Application.routes.draw do
   get '/sandbox', to: 'root#sandbox' if Rails.env.development?
   root to:'root#home'
   resources :users
+  get "select_crappers/create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

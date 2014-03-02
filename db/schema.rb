@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140301174353) do
+ActiveRecord::Schema.define(version: 20140302004358) do
 
   create_table "crappers", force: true do |t|
     t.string "city"

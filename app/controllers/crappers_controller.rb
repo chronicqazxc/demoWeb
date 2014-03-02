@@ -1,5 +1,5 @@
 class CrappersController < ApplicationController
-  before_action :set_crapper, only: [:show, :edit, :update, :destroy]
+  # before_action :set_crapper, only: [:show, :edit, :update, :destroy]
   def index
     @crappers = Crapper.all
     render :json => @crappers.to_json
@@ -24,8 +24,6 @@ class CrappersController < ApplicationController
     end
   end
   
-  # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
   def update
     if @crapper.update(update_params)
       redirect_to @crapper
@@ -41,6 +39,8 @@ class CrappersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+
   
   private
     # Use callbacks to share common setup or constraints between actions.
